@@ -83,18 +83,51 @@ header .intro {
   position: relative;
   background-color: #2D2C3E;
   margin: auto;
-  padding: 20px;
+  padding: 50px;
   border: 1px solid #888;
   width: 70%;
   animation-name: modal-animation;
   animation-duration: 0.5s;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+.modal-column {
+  flex: 1;
+  padding: 10px;
+}
+.modal-image {
+  flex: 1;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This aligns items vertically in the middle */
+  align-items: center; /* This aligns items horizontally in the middle */
+}
+
+
+.modal-text {
+  order: 2;
+  text-align: justify;
+
+  flex: 2;
+}
+
+.social-links {
+
+  display: flex;
+  justify-content: center; /* Center the social links horizontally */
+  gap: 10px; /* Add some space between the links */
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+}
+
 @keyframes modal-animation {
-  from {transform: scale(0) translate(-50%, -50%); opacity: 0;}
+  from {transform: scale(0) translate(-10%, 0%); opacity: 0;}
   to {transform: scale(1); opacity: 1;}
 }
 
@@ -129,6 +162,77 @@ section h2 {
   font-size: 2em;
   color: #E0E0E6;
 }
+
+
+#skills {
+  text-align: center;
+  padding: 50px 0;
+  background: #2D2C3E;
+  color: #fff;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+h2 {
+  font-family: 'Amiko', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.flip-card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+/* Add the rest of the CSS for the flip cards here */
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #3d3c4e;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #bbb;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
 
 .contact {
   display: flex;
