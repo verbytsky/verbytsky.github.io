@@ -272,3 +272,14 @@ footer .social-links img {
   height: 24px;   /* adjust this value as needed */
   margin-right: 10px; /* add some space between the images */
 }
+
+.snap-container {
+  height: 100vh; /* viewport height */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.snap-child {
+  height: 100vh;
+  scroll-snap-align: start;
+}
